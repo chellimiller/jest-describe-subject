@@ -1,0 +1,20 @@
+# Builds and Releases
+.dist
+.build
+
+# Config Files
+*.json
+*.md
+*.js
+*.cjs
+
+# Cache
+.cache
+
+# Dependency directories
+node_modules/
+
+# Ignore files
+.prettierignore
+.gitignore
+.eslintignore

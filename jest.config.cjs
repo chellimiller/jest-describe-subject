@@ -1,11 +1,11 @@
 module.exports = {
-  preset: "ts-jest",
+  preset: 'ts-jest',
   collectCoverage: true,
   collectCoverageFrom: [
-    "**/*.tsx?",
-    "**/*.jsx?",
-    "!**/node_modules/**",
-    "!dist/**",
+    '**/*.tsx?',
+    '**/*.jsx?',
+    '!**/node_modules/**',
+    '!dist/**',
   ],
   coverageThreshold: {
     global: {
@@ -15,5 +15,5 @@ module.exports = {
       statements: 100,
     },
   },
-  modulePathIgnorePatterns: ["npm-cache", ".npm"],
+  modulePathIgnorePatterns: ['npm-cache', '.npm'],
 };

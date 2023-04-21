@@ -6,20 +6,15 @@
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "clean": "rimraf build/",
-    "lint": "eslint src/**",
+    "build": "tsc --project tsconfig.build.json",
+    "clean": "rimraf ./.build/",
+    "lint:format": "prettier --check * src/** --cache --cache-location ./.cache/.prettiercache",
+    "lint:standards": "eslint src/** --cache --cache-location ./.cache/.eslintcache",
+    "lint": "npm run lint:format && npm run lint:standards",
     "test": "jest",
-    "watch": "tsc --watch"
+    "watch": "tsc --watch --project tsconfig.build.json"
   },
-  "keywords": [
-    "jest",
-    "typescript",
-    "test",
-    "describe",
-    "subject",
-    "demo"
-  ],
+  "keywords": ["jest", "typescript", "test", "describe", "subject", "demo"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chellimiller/jest-describe-subject.git",

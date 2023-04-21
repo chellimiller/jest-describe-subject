@@ -1,0 +1,15 @@
+# Builds and Releases
+.dist
+.build
+
+# Cache
+.cache
+.npm
+
+# Dependency directories
+**/node_modules
+
+# Ignore files
+.prettierignore
+.gitignore
+.eslintignore

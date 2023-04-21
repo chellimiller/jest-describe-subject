@@ -1,6 +1,9 @@
 {
   "root": true,
   "extends": ["../../.eslintrc"],
+  "rules": {
+    "no-console": "off"
+  },
   "overrides": [
     {
       "files": ["src/**"],

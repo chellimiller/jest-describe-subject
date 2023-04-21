@@ -1,3 +1,22 @@
 {
-  "extends": ["airbnb-base", "airbnb-typescript/base"]
+  "extends": ["airbnb-base", "prettier"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["airbnb-typescript/base"],
+      "parser": "@typescript-eslint/parser",
+      "plugins": ["@typescript-eslint"]
+    },
+    {
+      "files": [
+        ".eslintrc.{js,cjs}",
+        ".prettierrc.{js,cjs}",
+        "jest.config.{js,cjs}"
+      ],
+      "parser": "espree",
+      "rules": {
+        "import/no-unresolved": "off"
+      }
+    }
+  ]
 }

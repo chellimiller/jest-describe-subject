@@ -7,10 +7,15 @@
   "scripts": {
     "build": "npm run build --workspaces --if-present",
     "clean": "npm run clean --workspaces",
-    "lint": "npm run lint --workspaces --if-present",
+    "lint:format:root": "prettier --check * .vscode/* --cache",
+    "lint:format": "npm run lint:format:root && npm run lint:format --workspaces --if-present",
+    "lint:standards:root": "eslint",
+    "lint:standards": "npm run lint:standards:root && npm run lint:standards --workspaces --if-present",
+    "lint:root": "npm run lint:format:root && npm run lint:standards:root",
+    "lint": "npm run lint:root && npm run lint --workspaces --if-present",
     "test": "npm run test --workspaces --if-present",
     "nuke": "git clean -fxd",
-    "setup": "npm install && npm run build"
+    "setup": "npm install --workspaces --include-workspace-root && npm run build"
   },
   "repository": {
     "type": "git",
@@ -43,8 +48,10 @@
     "eslint": "^8.2.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.25.2",
     "jest": "^29.5.0",
+    "prettier": "^2.8.7",
     "rimraf": "^5.0.0",
     "ts-jest": "^29.1.0",
     "typescript": "^5.0.4"

@@ -2,24 +2,20 @@
   "name": "jest-describe-subject",
   "version": "0.1.0",
   "description": "Library to make it easier to test code with Jest.",
-  "main": "build/index.js",
+  "main": ".build/index.js",
   "private": true,
-  "types": "build/index.d.ts",
+  "types": ".build/index.d.ts",
   "module": "umd",
   "scripts": {
-    "build": "tsc",
-    "clean": "rimraf build/",
-    "lint": "eslint src/**",
+    "build": "tsc --project tsconfig.build.json",
+    "clean": "rimraf ./.build/",
+    "lint:format": "prettier --check * src/** --cache --cache-location ./.cache/.prettiercache",
+    "lint:standards": "eslint src/** --cache --cache-location ./.cache/.eslintcache",
+    "lint": "npm run lint:format && npm run lint:standards",
     "test": "jest",
-    "watch": "tsc --watch"
+    "watch": "tsc --watch --project tsconfig.build.json"
   },
-  "keywords": [
-    "jest",
-    "describe",
-    "typescript",
-    "subject",
-    "test"
-  ],
+  "keywords": ["jest", "describe", "typescript", "subject", "test"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chellimiller/jest-describe-subject.git",

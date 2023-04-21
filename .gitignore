@@ -1,31 +1,14 @@
 # Logs
 logs
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
-.pnpm-debug.log*
 
 # Builds and Releases
-dist
-build
-
-# Diagnostic reports (https://nodejs.org/api/report.html)
-report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
-
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
+.dist
+.build
 
 # Cache
 .cache
-*.tsbuildinfo
 .npm
-.eslintcache
-.stylelintcache
 
 # Test Coverage Directory
 coverage
@@ -33,7 +16,6 @@ coverage
 
 # Dependency directories
 node_modules/
-jspm_packages/
 
 # dotenv environment variable files
 .env

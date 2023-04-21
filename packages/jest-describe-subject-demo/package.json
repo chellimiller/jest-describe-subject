@@ -1,0 +1,43 @@
+{
+  "name": "@chellimiller/jest-describe-subject-demo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Demo for jest-describe-subject usage",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf build/",
+    "lint": "eslint src/**",
+    "test": "jest",
+    "watch": "tsc --watch"
+  },
+  "keywords": [
+    "jest",
+    "typescript",
+    "test",
+    "describe",
+    "subject",
+    "demo"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chellimiller/jest-describe-subject.git",
+    "directory": "packages/jest-describe-subject-demo"
+  },
+  "author": {
+    "name": "Michelle Miller",
+    "url": "https://github.com/chellimiller"
+  },
+  "bugs": {
+    "url": "https://github.com/chellimiller/jest-describe-subject/issues"
+  },
+  "homepage": "https://github.com/chellimiller/jest-describe-subject/packages/jest-describe-subject-demo#readme",
+  "license": "MIT",
+  "devDependencies": {
+    "jest-describe-subject": "*",
+    "jest": "*",
+    "eslint": "*",
+    "typescript": "*"
+  }
+}

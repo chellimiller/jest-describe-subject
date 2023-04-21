@@ -1,0 +1,43 @@
+{
+  "name": "jest-describe-subject",
+  "version": "0.1.0",
+  "description": "Library to make it easier to test code with Jest.",
+  "main": "build/index.js",
+  "private": true,
+  "types": "build/index.d.ts",
+  "module": "umd",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf build/",
+    "lint": "eslint src/**",
+    "test": "jest",
+    "watch": "tsc --watch"
+  },
+  "keywords": [
+    "jest",
+    "describe",
+    "typescript",
+    "subject",
+    "test"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chellimiller/jest-describe-subject.git",
+    "directory": "packages/jest-describe-subject"
+  },
+  "author": {
+    "name": "Michelle Miller",
+    "url": "https://github.com/chellimiller"
+  },
+  "bugs": {
+    "url": "https://github.com/chellimiller/jest-describe-subject/issues"
+  },
+  "homepage": "https://github.com/chellimiller/jest-describe-subject/packages/jest-describe-subject#readme",
+  "license": "MIT",
+  "peerDependencies": {
+    "jest": ">=22.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.1"
+  }
+}

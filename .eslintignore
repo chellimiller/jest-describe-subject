@@ -5,8 +5,7 @@
 # Config Files
 *.json
 *.md
-*.js
-*.cjs
+LICENSE
 
 # Cache
 .cache

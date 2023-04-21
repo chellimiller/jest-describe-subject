@@ -7,15 +7,17 @@
   "scripts": {
     "build": "npm run build --workspaces --if-present",
     "clean": "npm run clean --workspaces",
-    "lint:format:root": "prettier --check * .vscode/* --cache",
-    "lint:format": "npm run lint:format:root && npm run lint:format --workspaces --if-present",
-    "lint:standards:root": "eslint",
-    "lint:standards": "npm run lint:standards:root && npm run lint:standards --workspaces --if-present",
-    "lint:root": "npm run lint:format:root && npm run lint:standards:root",
+    "format": "npm run format:root && npm run format --workspaces --if-present",
+    "format:fix": "npm run format:root -- --write && npm run format:fix --workspaces --if-present",
+    "format:root": "prettier --check * .vscode/* --cache --cache-location ./.cache/.prettiercache",
     "lint": "npm run lint:root && npm run lint --workspaces --if-present",
+    "lint:fix": "npm run lint:root -- --fix && npm run lint:fix --workspaces --if-present",
+    "lint:root": "eslint * --cache --cache-location ./.cache/.eslintcache",
     "test": "npm run test --workspaces --if-present",
+    "test:changes": "npm run test:changes --workspaces --if-present",
     "nuke": "git clean -fxd",
     "setup": "npm install --workspaces --include-workspace-root && npm run build",
+    "precommit": "lint-staged",
     "prepare": "husky install"
   },
   "repository": {
@@ -47,9 +49,13 @@
     "eslint-plugin-import": "^2.25.2",
     "husky": "^8.0.3",
     "jest": "^29.5.0",
+    "lint-staged": "^13.2.1",
     "prettier": "^2.8.7",
     "rimraf": "^5.0.0",
     "ts-jest": "^29.1.0",
     "typescript": "^5.0.4"
+  },
+  "lint-staged": {
+    "*": "prettier --ignore-unknown --write"
   }
 }

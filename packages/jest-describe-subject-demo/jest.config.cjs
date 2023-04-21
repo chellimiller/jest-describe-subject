@@ -1,6 +1,6 @@
-const base = require('../../.jest.config');
+const base = require('../../jest.config.cjs');
 
 module.exports = {
   ...base,
-  coverageDirectory: '.coverage'
+  coverageDirectory: '.coverage',
 };

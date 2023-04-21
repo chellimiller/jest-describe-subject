@@ -12,7 +12,7 @@
     "lint:format": "prettier --check * src/** --cache --cache-location ./.cache/.prettiercache",
     "lint:standards": "eslint src/** --cache --cache-location ./.cache/.eslintcache",
     "lint": "npm run lint:format && npm run lint:standards",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "watch": "tsc --watch --project tsconfig.build.json"
   },
   "keywords": ["jest", "describe", "typescript", "subject", "test"],

@@ -6,8 +6,9 @@
 .cache
 .npm
 
-# Dependency directories
+# Dependencies
 **/node_modules
+package-lock.json
 
 # Ignore files
 .prettierignore

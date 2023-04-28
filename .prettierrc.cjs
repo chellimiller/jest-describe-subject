@@ -14,6 +14,12 @@ module.exports = {
       },
     },
     {
+      files: '*.ts',
+      options: {
+        printWidth: 100,
+      },
+    },
+    {
       files: 'LICENSE',
       options: {
         parser: 'markdown',
